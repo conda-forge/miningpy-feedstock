@@ -11,7 +11,7 @@ source:
   sha256: 202d7d4f4a836fd26ff86f5c17fd6071593206ed1332afbb1c6b283c95c32cde
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -26,7 +26,7 @@ requirements:
     - python
     - pyvista
     - vtk >=8.0
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:
