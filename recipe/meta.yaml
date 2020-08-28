@@ -1,5 +1,5 @@
 {% set name = "miningpy" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a0808ce595a37bca37e66386a9a6b0ae4c46ceb06184986e0f370953cafb9ad6
+  sha256: 202d7d4f4a836fd26ff86f5c17fd6071593206ed1332afbb1c6b283c95c32cde
 
 build:
   number: 0
@@ -26,6 +26,7 @@ requirements:
     - python
     - pyvista
     - vtk >=8.0
+    - matplotlib
 
 test:
   imports:
