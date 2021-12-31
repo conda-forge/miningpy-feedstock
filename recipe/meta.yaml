@@ -1,5 +1,5 @@
 {% set name = "miningpy" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 
 package:
@@ -8,23 +8,23 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3cdb34a552d77509932f4f975ceed55207a8fecee61d8fe72086913bf1ccde04
+  sha256: f7b65b0ab9bae549720e68599bbfb4c97200868f55bcca4b92b45d313a25f3b9
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not win]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - ezdxf >=0.13.1
-    - numpy !=1.19.4
+    - numpy >=1.19.0
     - pandas >=1.0
-    - python
-    - pyvista >=0.25
+    - python >=3.6
+    - pyvista >=0.32
     - vtk >=8.0
     - matplotlib-base
 
