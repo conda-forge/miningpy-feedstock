@@ -1,5 +1,5 @@
 {% set name = "miningpy" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7825c7933d80d76002630fca2f5a10da69cf118b6604a64ad089a0eb1b0b897a
+  sha256: 64773c08f6e1a77a74c40460f22559b87a83be7795d622fdbf8d8765185a617d
 
 build:
   number: 0
