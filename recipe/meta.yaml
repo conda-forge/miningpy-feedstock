@@ -1,5 +1,5 @@
 {% set name = "miningpy" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 64773c08f6e1a77a74c40460f22559b87a83be7795d622fdbf8d8765185a617d
+  sha256: 4fe01a182591fd60dbba1552c8d51935cdaf3742ed1e1083163d92bb7d465a7c
 
 build:
   number: 0
@@ -24,7 +24,7 @@ requirements:
     - numpy >=1.19.0
     - pandas >=1.0
     - python >=3.7
-    - pyvista >=0.32
+    - pyvista >=0.32,!=0.35.2
     - pyvistaqt
     - pyqt
     - vtk >=9.1.0
