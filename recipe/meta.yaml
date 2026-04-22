@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4fe01a182591fd60dbba1552c8d51935cdaf3742ed1e1083163d92bb7d465a7c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - ezdxf >=0.13.1
     - numpy >=1.19.0
     - pandas >=1.0
-    - python >=3.7
+    - python >={{ python_min }}
     - pyvista >=0.32,!=0.35.2
     - pyvistaqt
     - pyqt
@@ -31,6 +31,8 @@ requirements:
     - matplotlib-base
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - miningpy
 
